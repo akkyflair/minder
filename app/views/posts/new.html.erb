@@ -1,6 +1,6 @@
 <div class="main posts-new">
   <div class="container">
-    <h1 class="form-heading">マインドをセットする</h1>
+    <%# <h1 class="form-heading">マインドをセットする</h1> %>
     <%= form_tag("/posts/create") do %>
       <div class="form">
         <div class="form-body">
@@ -10,7 +10,7 @@
             </div>
           <% end %>
           <textarea name="content"><%= @post.content %></textarea>
-          <input type="submit" value="セット">
+          <input type="submit" value="マインドをセットする">
         </div>
       </div>
     <% end %>
