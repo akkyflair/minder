@@ -10,6 +10,20 @@
   </head>
 
   <body>
+
+    <header>
+      <div class="header-logo">
+        <%= link_to("Minder", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("Minderとは", "/about") %>
+        </li>
+        <li>
+          <%= link_to("マインド一覧", "/posts/index") %>
+        </li>
+      </ul>
+    </header>
     <%= yield %>
   </body>
 </html>
