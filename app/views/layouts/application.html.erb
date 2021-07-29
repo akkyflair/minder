@@ -17,10 +17,9 @@
         <%= link_to("Minder", "/") %>
       </div>
       <ul class="header-menus">
-        <% current_user = User.find_by(id: session[:user_id]) %>
-        <% if current_user %>
+        <% if @current_user %>
           <li>
-            <%= link_to(current_user.name, "/users/#{current_user.id}") %>
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
           </li>
           <li>
             <%= link_to("マインド一覧", "/posts/index") %>
@@ -44,7 +43,7 @@
           <li>
             <%= link_to("ログイン", "/login") %>
           </li>
-        <% end %>                   
+        <% end %>
       </ul>
     </header>
 
