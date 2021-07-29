@@ -8,6 +8,8 @@
           </div>
         <% end %>
         <%= form_tag("/login") do %>
+          <p>ユーザー名</p>
+          <input type="name" name="name" value="<%= @user %>">
           <p>パスワード</p>
           <input type="password" name="password" value="<%= @password %>">
           <input type="submit" value="ログイン">
