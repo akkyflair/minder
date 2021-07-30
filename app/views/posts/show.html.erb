@@ -13,10 +13,12 @@
       </div>
 
       <% if Mindcatch.find_by(user_id: @current_user.id, post_id: @post.id) %>
-        <%= link_to("マインドキャッチ！済み", "/mindcatches/#{@post.id}/destroy", {method: "post"}) %>
+        <%= link_to("マインドキャッチされました！", "/mindcatches/#{@post.id}/destroy", {method: "post"}) %>
       <% else %>
         <%= link_to("マインドキャッチ！", "/mindcatches/#{@post.id}/create", {method: "post"}) %>
       <% end %>
+
+      <%= @mindcatches_count %>
 
       <% if @post.user_id == @current_user.id %>
         <div class="post-menus">
