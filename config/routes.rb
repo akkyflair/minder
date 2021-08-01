@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   post "login" => "users#login"
   post "logout" => "users#logout"
   get "login" => "users#login_form"
-
-  resources :posts do
-    resources :users do
-      resources :mindcatches, only: [:create, :destoroy]
-    end
+  
+  resources :users 
+  resources :mindcatches, only: [:create, :destoroy] do
+    resources :posts 
   end
+  resources :posts 
+  
 
   # post "mindcatches/:post_id/create" => "mindcatches#create"
   # post "mindcatches/:post_id/destroy" => "mindcatches#destroy"
