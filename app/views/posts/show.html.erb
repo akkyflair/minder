@@ -13,9 +13,9 @@
       </div>
 
       <% if Mindcatch.find_by(user_id: @current_user.id, post_id: @post.id) %>
-        <%= link_to("マインドキャッチされました！", "/mindcatches/#{@post.id}/destroy", {method: "post"}) %>
+        <%= link_to("マインドキャッチされました！", "/posts/#{@post.id}/mindcatches/#{@post[:id]}", {method: "delete"}) %>
       <% else %>
-        <%= link_to("マインドキャッチ！", "/mindcatches/#{@post.id}/create", {method: "post"}) %>
+        <%= link_to("マインドキャッチ！", "/posts/#{@post.id}/mindcatches", {method: "post"}) %>
       <% end %>
 
       <%= @mindcatches_count %>
@@ -23,7 +23,7 @@
       <% if @post.user_id == @current_user.id %>
         <div class="post-menus">
           <%= link_to("編集", "/posts/#{@post.id}/edit") %>
-          <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+          <%= link_to("削除", "/posts/#{@post.id}", {method: "delete"}) %>
         </div>
       <% end %>
     </div>

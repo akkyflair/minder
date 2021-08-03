@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     )
     if @post.save
       flash[:notice] = "マインドを作成しました"
-      redirect_to("/posts/index")
+      redirect_to("/posts")
     else
       render("posts/new")
     end
@@ -38,9 +38,9 @@ class PostsController < ApplicationController
     @post.content = params[:content]
     if @post.save
       flash[:notice] = "マインドを編集しました"
-      redirect_to("/posts/index")
+      redirect_to("/posts")
     else
-      render("posts/edit")
+      render("posts/#{@post[:id]}/edit")
     end
   end
 
@@ -48,14 +48,14 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.destroy
     flash[:notice] = "マインドを削除しました"
-    redirect_to("/posts/index")
+    redirect_to("/posts")
   end
   
   def ensure_correct_user
     @post = Post.find_by(id: params[:id])
     if @post.user_id != @current_user.id
       flash[:notice] = "権限がありません"
-      redirect_to("/posts/index")
+      redirect_to("/posts")
     end
   end
   

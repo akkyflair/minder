@@ -9,7 +9,7 @@
           </div>
         <% end %>
 
-        <%= form_tag("/users/#{@user.id}/update") do %>
+        <%= form_with url:"/users/#{@user.id}", method: :patch do |f| %>
           <p>ユーザー名</p>
           <input name="name" value="<%= @user.name %>">
           <input type="submit" value="保存">
