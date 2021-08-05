@@ -61,58 +61,58 @@ body {
 }
 
 /* ヘッダー ================================ */
-header {
-  height: 64px;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  background-color: rgba(0, 0, 255, 0.8);
-}
+// header {
+//   height: 64px;
+//   position: absolute;
+//   z-index: 1;
+//   width: 100%;
+//   background-color: rgba(0, 0, 255, 0.8);
+// }
 
-.header-logo {
-  float: left;
-  padding-left: 20px;
-  color: white;
-  font-size: 22px;
-  line-height: 64px;
-}
+// .header-logo {
+//   float: left;
+//   padding-left: 20px;
+//   color: white;
+//   font-size: 22px;
+//   line-height: 64px;
+// }
 
-.header-logo a{
-  color: white;
-  font-size: 22px;
-}
+// .header-logo a{
+//   color: white;
+//   font-size: 22px;
+// }
 
-.header-menus {
-  float: right;
-  padding-right: 20px;
-}
+// .header-menus {
+//   float: right;
+//   padding-right: 20px;
+// }
 
-.header-menus li {
-  float: left;
-  line-height: 64px;
-  font-size: 13px;
-  color: white;
-  padding-left: 15px;
-}
+// .header-menus li {
+//   float: left;
+//   line-height: 64px;
+//   font-size: 13px;
+//   color: white;
+//   padding-left: 15px;
+// }
 
-.header-menus a {
-  float: left;
-  font-size: 13px;
-  color: white;
-}
+// .header-menus a {
+//   float: left;
+//   font-size: 13px;
+//   color: white;
+// }
 
-.header-menus .fa {
-  padding-right: 5px;
-}
+// .header-menus .fa {
+//   padding-right: 5px;
+// }
 
-.header-menus input[type="submit"] {
-  padding: 0 20px;
-  float: left;
-  line-height: 64px;
-  color: white;
-  margin: 0;
-  font-size: 13px;
-}
+// .header-menus input[type="submit"] {
+//   padding: 0 20px;
+//   float: left;
+//   line-height: 64px;
+//   color: white;
+//   margin: 0;
+//   font-size: 13px;
+// }
 
 /* top ================================ */
 .top-main {
@@ -148,12 +148,12 @@ header {
 
 /* about ================================ */
 .about-main {
-  padding: 180px 8% 0;
-  color: white;
+  padding: 240px 6% 0;
+  color: black;
 }
 
-.about-main h2 {
-  font-size: 64px;
+.about-main h1 {
+  font-size: 30px;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -165,6 +165,7 @@ header {
 
 .about-img {
   width: 84%;
+  margin-bottom: 40px;
 }
 
 /* フォーム================================ */
@@ -177,10 +178,10 @@ header {
 }
 
 .form-heading {
-  font-weight: 300;
-  margin: 60px 0 20px;
-  font-size: 48px;
-  color: white;
+  font-weight: 100px;
+  margin: 10px 0 0px;
+  font-size: 24px;
+  color: #57575f;
 }
 
 .form-body {
