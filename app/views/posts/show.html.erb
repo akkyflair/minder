@@ -13,7 +13,7 @@
       </div>
 
       <% if Mindcatch.find_by(user_id: @current_user.id, post_id: @post.id) %>
-        <%= link_to("マインドキャッチされました！", "/posts/#{@post.id}/mindcatches/#{@post[:id]}", {method: "delete"}) %>
+        <%= link_to("マインドキャッチしました！", "/posts/#{@post.id}/mindcatches/#{@post[:id]}", {method: "delete"}) %>
       <% else %>
         <%= link_to("マインドキャッチ！", "/posts/#{@post.id}/mindcatches", {method: "post"}) %>
       <% end %>
